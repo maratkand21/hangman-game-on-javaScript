@@ -82,9 +82,10 @@ for (let i = 0; i < 26; i++) {
 	keyboard.appendChild(div);			
 }
 
-/* word field delegation */
-console.log(word)
+
 let attempt = 6;
+
+/* word field delegation */
 
 keyboard.addEventListener('click', event => {
 	if (event.target.classList == 'letter') {	
@@ -121,7 +122,6 @@ function searchLetterInWord () {
 
 			singleLetter.forEach((element, index) => {
 				element.innerHTML = word[index];
-				console.log(true)
 			});
 		}
 
@@ -130,7 +130,6 @@ function searchLetterInWord () {
 	else {
 		event.target.classList.add('used');
 		singleLetter.forEach((element, index) => {
-			console.log(index)
 			for (let j = 0; j < position.length; j++) {
 				if (index == position[j]) {
 					element.innerHTML = event.target.textContent;
